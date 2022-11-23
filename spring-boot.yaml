@@ -18,6 +18,8 @@ spec:
       - name: spring-boot-app
         image: asia.gcr.io/eunoia0523/petclinic:1
         imagePullPolicy: Always
+        command: [ "/bin/bash", "-c", "--" ]
+        args: [ "while true; do sleep 30; done;" ]
         ports:
         - containerPort: 8080
         resources:
