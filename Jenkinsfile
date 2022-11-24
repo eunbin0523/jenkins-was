@@ -17,6 +17,7 @@ pipeline {
                 }
             }
           }
+
         stage('Push to registry') {
             steps {
              script {
@@ -50,4 +51,4 @@ pipeline {
                 }
            }        
       }
-   }
+ }
