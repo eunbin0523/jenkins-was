@@ -24,6 +24,9 @@ pipeline {
                         docker.withRegistry('https://asia.gcr.io', 'gcr:eunoia0523') {
                         app.push("${env.BUILD_NUMBER}")
                     }
+		}
+        	}
+	}
 
         stage('K8S Manifest Update') {
 
@@ -51,3 +54,4 @@ pipeline {
                 }
            }        
       }
+}
